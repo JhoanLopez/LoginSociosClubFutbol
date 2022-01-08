@@ -12,17 +12,17 @@ import java.sql.SQLException;
 
 public class ConexionDDBB {
     
-    public static String url = "jdbc:mysql://localhost/nombreBaseDatos";
+    public static String url = "jdbc:mysql://localhost/datosusuarios";
     public static String usuario = "root";
-    public static String contraseña = "1234";
+    public static String contraseña = null;
     public static String clase = "com.mysql.jdbc.Driver";
     
-    public static Connection conectar() throws ClassNotFoundException{
+    public static Connection conectar() {
         Connection conexion = null;
         
         try {
             Class.forName(clase);
-            conexion = DriverManager.getConnection (url, usuario, contraseña);
+            conexion = (Connection) DriverManager.getConnection (url,usuario,contraseña);
             System.out.println("Conexión establecida");
         } catch (SQLException ex) {
             System.out.println(ex);
