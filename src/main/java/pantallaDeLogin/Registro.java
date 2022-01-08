@@ -187,7 +187,7 @@ public class Registro extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Dropbox\\LineaHorizontal.png")); // NOI18N
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\LineaHorizontal.png")); // NOI18N
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, 390));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 255));
@@ -242,7 +242,7 @@ public class Registro extends javax.swing.JFrame {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 410, -1));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Desktop\\DegradadoNuevo.PNG")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\DegradadoNuevo.PNG")); // NOI18N
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 140, 400));
 
         pack();

@@ -31,6 +31,18 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLabel14">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\LineaHorizontal.png"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="10" width="-1" height="390"/>
+        </Constraint>
+      </Constraints>
+    </Component>
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -74,7 +86,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jleon\Downloads\RealMadridEscudo.png"/>
+              <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\RealMadridEscudo.png"/>
             </Property>
           </Properties>
         </Component>
@@ -82,7 +94,7 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jleon\Dropbox\BienvenidosFinal.png"/>
+              <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\BienvenidosFinal.png"/>
             </Property>
           </Properties>
         </Component>
@@ -90,24 +102,12 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jleon\Dropbox\MadridistasFinal.png"/>
+              <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\MadridistasFinal.png"/>
             </Property>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel14">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\jleon\Dropbox\LineaHorizontal.png"/>
-        </Property>
-      </Properties>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="370" y="10" width="-1" height="390"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Container class="javax.swing.JPanel" name="jPanel2">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -351,14 +351,14 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jleon\Downloads\Candado.png"/>
+              <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Candado.png"/>
             </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\jleon\Downloads\Usuario.png"/>
+              <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Usuario.png"/>
             </Property>
           </Properties>
         </Component>
@@ -418,7 +418,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\Downloads\Check.png"/>
+                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Check.png"/>
                 </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
@@ -427,7 +427,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\Downloads\Cross.png"/>
+                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Cross.png"/>
                 </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
@@ -472,7 +472,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\Downloads\Check.png"/>
+                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Check.png"/>
                 </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
@@ -481,7 +481,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\Downloads\Cross.png"/>
+                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Cross.png"/>
                 </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
@@ -554,7 +554,7 @@
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\jleon\Desktop\DegradadoNuevo.PNG"/>
+          <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\DegradadoNuevo.PNG"/>
         </Property>
       </Properties>
       <Constraints>

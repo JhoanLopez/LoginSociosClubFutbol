@@ -30,11 +30,11 @@ public class LoginPantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel14 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         correoTxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -64,16 +64,19 @@ public class LoginPantalla extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\LineaHorizontal.png")); // NOI18N
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, 390));
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\RealMadridEscudo.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\RealMadridEscudo.png")); // NOI18N
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Dropbox\\BienvenidosFinal.png")); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\BienvenidosFinal.png")); // NOI18N
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Dropbox\\MadridistasFinal.png")); // NOI18N
+        jLabel16.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\MadridistasFinal.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -99,9 +102,6 @@ public class LoginPantalla extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Dropbox\\LineaHorizontal.png")); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, -1, 390));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,9 +187,9 @@ public class LoginPantalla extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Candado.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Candado.png")); // NOI18N
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Usuario.png")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Usuario.png")); // NOI18N
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -200,11 +200,11 @@ public class LoginPantalla extends javax.swing.JFrame {
         jPanel6.setPreferredSize(new java.awt.Dimension(25, 20));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Check.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Check.png")); // NOI18N
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Cross.png")); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Cross.png")); // NOI18N
         jLabel8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -232,11 +232,11 @@ public class LoginPantalla extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(25, 20));
 
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Check.png")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Check.png")); // NOI18N
         jLabel10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Downloads\\Cross.png")); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Cross.png")); // NOI18N
         jLabel9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -371,7 +371,7 @@ public class LoginPantalla extends javax.swing.JFrame {
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 410, -1));
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\Desktop\\DegradadoNuevo.PNG")); // NOI18N
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\DegradadoNuevo.PNG")); // NOI18N
         getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 140, 400));
 
         pack();
@@ -462,6 +462,10 @@ public class LoginPantalla extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         perfil.setVisible(true);
+        this.dispose();
+        perfil.nombre.setText(MetodosSql.buscarNombre(correoTxt.getText()).toString().toUpperCase());
+        perfil.numeroLbl.setText(correoTxt.getText().toString());
+        
         String busquedaUsuario = "";
                busquedaUsuario = MetodosSql.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
                 //metodos.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
@@ -470,10 +474,6 @@ public class LoginPantalla extends javax.swing.JFrame {
             //Ya estoy dentro
             String busquedaNombre = MetodosSql.buscarNombre(correoTxt.getText());//metodos.buscarNombre(correoTxt.getText());
             JOptionPane.showMessageDialog(this, "Bienvenido \n" + busquedaNombre);
-            
-          
-           
-            this.dispose();
             JOptionPane.showMessageDialog(this, "Usuario registrado, prueba a registrarte");
         } else {
             JOptionPane.showMessageDialog(this, "Usuario no registrado, prueba a registrarte");
