@@ -63,7 +63,7 @@ public class MetodosSql {
     }
     
     public static String buscarUsuarioRegistrado (String correo, String contraseña) {
-        String busquedaUsuario = null;
+        String busquedaUsuario = "ere";
         Connection conexion = null;
         
         try {
@@ -71,9 +71,9 @@ public class MetodosSql {
             String sentenciaBuscarUsuario = 
             ("SELECT nombre,apellidos,correo,contraseña FROM usuarios WHERE correo = '" +
             correo + "' && contraseña = '" + contraseña + "'");
-            
-            resultado = sentenciaPreparada.executeQuery();
             sentenciaPreparada = conexion.prepareStatement(sentenciaBuscarUsuario);
+            resultado = sentenciaPreparada.executeQuery();
+            
             if (resultado.next()) {
                 busquedaUsuario = "Usuario encontrado";
                 System.out.println(busquedaUsuario);

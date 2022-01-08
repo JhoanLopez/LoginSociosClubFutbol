@@ -23,7 +23,7 @@ public class LoginPantalla extends javax.swing.JFrame {
     }
 
     PantallaPerfil perfil = new PantallaPerfil();
-    //MetodosSql metodos = new MetodosSql();
+    MetodosSql metodos = new MetodosSql();
     
     
     @SuppressWarnings("unchecked")
@@ -461,20 +461,18 @@ public class LoginPantalla extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel12MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        perfil.setVisible(true);
-        this.dispose();
+
         perfil.nombre.setText(MetodosSql.buscarNombre(correoTxt.getText()).toString().toUpperCase());
         perfil.numeroLbl.setText(correoTxt.getText().toString());
-        
-        String busquedaUsuario = "";
-               busquedaUsuario = MetodosSql.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
-                //metodos.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
+        String busquedaUsuario =
+        MetodosSql.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText().toString());
+        //metodos.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
         
         if (busquedaUsuario.equalsIgnoreCase("Usuario encontrado")) {
             //Ya estoy dentro
+            perfil.setVisible(true);
+            this.dispose();
             String busquedaNombre = MetodosSql.buscarNombre(correoTxt.getText());//metodos.buscarNombre(correoTxt.getText());
-            JOptionPane.showMessageDialog(this, "Bienvenido \n" + busquedaNombre);
-            JOptionPane.showMessageDialog(this, "Usuario registrado, prueba a registrarte");
         } else {
             JOptionPane.showMessageDialog(this, "Usuario no registrado, prueba a registrarte");
         }
