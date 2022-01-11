@@ -462,8 +462,6 @@ public class LoginPantalla extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        perfil.nombre.setText(MetodosSql.buscarNombre(correoTxt.getText()).toString().toUpperCase());
-        perfil.numeroLbl.setText(correoTxt.getText().toString());
         String busquedaUsuario =
         MetodosSql.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText().toString());
         //metodos.buscarUsuarioRegistrado(correoTxt.getText(), contrasenaTxt.getText());
@@ -471,8 +469,9 @@ public class LoginPantalla extends javax.swing.JFrame {
         if (busquedaUsuario.equalsIgnoreCase("Usuario encontrado")) {
             //Ya estoy dentro
             perfil.setVisible(true);
+            perfil.nombre.setText(MetodosSql.buscarNombre(correoTxt.getText()).toString().toUpperCase());
+            perfil.numeroLbl.setText(correoTxt.getText().toString());
             this.dispose();
-            String busquedaNombre = MetodosSql.buscarNombre(correoTxt.getText());//metodos.buscarNombre(correoTxt.getText());
         } else {
             JOptionPane.showMessageDialog(this, "Usuario no registrado, prueba a registrarte");
         }
