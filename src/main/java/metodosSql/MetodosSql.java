@@ -16,7 +16,7 @@ public class MetodosSql {
     public static String sql;
     public static int resultadoNum = 0;
 
-    public int guardar (String nombre, String apellidos, String correo, String contraseña) {
+    public static int guardar (String nombre, String apellidos, String correo, String contraseña) {
         int resultado = 0;
         Connection conexion = null;
         
@@ -33,7 +33,7 @@ public class MetodosSql {
             resultado = sentenciaPreparada.executeUpdate();
             sentenciaPreparada.close();
             conexion.close();
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             System.out.println(ex);
         }
         return resultado;
@@ -56,14 +56,14 @@ public class MetodosSql {
             }
            
             conexion.close();
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             System.out.println(ex);
         }
         return busquedaNombre;
     }
     
     public static String buscarUsuarioRegistrado (String correo, String contraseña) {
-        String busquedaUsuario = "ere";
+        String busquedaUsuario = null;
         Connection conexion = null;
         
         try {
@@ -83,7 +83,7 @@ public class MetodosSql {
             }
            
             conexion.close();
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
             System.out.println(ex);
         }
         return busquedaUsuario;
