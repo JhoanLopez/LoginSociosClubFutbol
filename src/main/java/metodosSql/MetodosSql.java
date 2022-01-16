@@ -19,11 +19,10 @@ public class MetodosSql {
     public static int guardar (String nombre, String apellidos, String correo, String contraseña) {
         int resultado = 0;
         Connection conexion = null;
-        
-        String sentenciaGuardar = ("INSERT INTO usuarios (nombre,apellidos,correo,contraseña) VALUES (?,?,?,?)");
-        
         try {
             conexion = ConexionDDBB.conectar();
+            String sentenciaGuardar = 
+            ("INSERT INTO usuarios (nombre,apellidos,correo,contraseña) VALUES (?,?,?,?)");
             sentenciaPreparada = conexion.prepareStatement(sentenciaGuardar);
             sentenciaPreparada.setString(1, nombre);
             sentenciaPreparada.setString(2, apellidos);
@@ -34,29 +33,30 @@ public class MetodosSql {
             sentenciaPreparada.close();
             conexion.close();
         } catch (SQLException ex) {
+            System.out.print("ERROR: ");
             System.out.println(ex);
         }
         return resultado;
     }
     
     public static String buscarNombre (String correo) {
-    
         String busquedaNombre = null;
         Connection conexion = null;
-        
         try {
             conexion = ConexionDDBB.conectar();
             String sentenciaBuscar = ("SELECT nombre, apellidos FROM usuarios WHERE correo = '" + correo + "'");
             sentenciaPreparada = conexion.prepareStatement(sentenciaBuscar);
             resultado = sentenciaPreparada.executeQuery();
+            
             if (resultado.next()) {
                 String nombre = resultado.getString("nombre");
                 String apellidos = resultado.getString("apellidos");
                 busquedaNombre = (nombre + " " + apellidos);
             }
-           
+            
             conexion.close();
         } catch (SQLException ex) {
+            System.out.print("ERROR: ");
             System.out.println(ex);
         }
         return busquedaNombre;
@@ -65,7 +65,6 @@ public class MetodosSql {
     public static String buscarUsuarioRegistrado (String correo, String contraseña) {
         String busquedaUsuario = null;
         Connection conexion = null;
-        
         try {
             conexion = ConexionDDBB.conectar();
             String sentenciaBuscarUsuario = 
@@ -81,9 +80,10 @@ public class MetodosSql {
                 busquedaUsuario = "Usuario no encontrado";
                 System.out.println(busquedaUsuario);
             }
-           
+            
             conexion.close();
         } catch (SQLException ex) {
+            System.out.print("ERROR: ");
             System.out.println(ex);
         }
         return busquedaUsuario;

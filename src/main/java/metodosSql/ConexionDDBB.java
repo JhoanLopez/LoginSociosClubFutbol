@@ -1,8 +1,13 @@
 package metodosSql;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * @date 4 ene. 2022
@@ -11,24 +16,30 @@ import java.sql.SQLException;
  */
 
 public class ConexionDDBB {
-    
-    public static String url = "jdbc:mysql://localhost/datosusuarios";
-    public static String usuario = "root";
-    public static String contraseña = null;
-    public static String clase = "com.mysql.jdbc.Driver";
-    
-    public static Connection conectar() {
+  
+    public static Connection conectar(){
+        Properties properties = new Properties();
         Connection conexion = null;
-        
         try {
-            Class.forName(clase);
-            conexion = (Connection) DriverManager.getConnection (url,usuario,contraseña);
-            System.out.println("Conexión establecida");
-        } catch (SQLException ex) {
+            properties.load(new FileInputStream(new File("properties.properties")));
+            String url = properties.get("url").toString();
+            String usuario = properties.get("usuario").toString();
+            String contraseña = properties.get("contraseña").toString();
+            try (var con = DriverManager.getConnection(url, usuario, contraseña)) {
+                conexion = DriverManager.getConnection(url, usuario, contraseña);
+                String guion = "--------------------";
+                System.out.println(guion + " CONECTADO CON LA BASE DE DATOS " + guion);
+            } catch (SQLException ex) {
+                System.out.println("NO PUDIMOS CONECTAR CON LA BASE DE DATOS:");
+                System.err.println(ex); 
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.print("ERROR: ");
             System.out.println(ex);
-        } catch (ClassNotFoundException ex) {
+        } catch (IOException ex) {
+            System.out.print("ERROR: ");
             System.out.println(ex);
-        }
+        } 
         return conexion;
     }
 }
