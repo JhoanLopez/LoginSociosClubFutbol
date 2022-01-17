@@ -1,6 +1,7 @@
 package pantallaDeLogin;
 
 import javax.swing.JOptionPane;
+import metodosSql.Metodos;
 import metodosSql.MetodosSql;
 
 /**
@@ -11,8 +12,17 @@ public class Registro extends javax.swing.JFrame {
     
     public Registro() {
         initComponents();
+        asigImg.asignarImagenes("DegradadoNuevo.png", jl_gradient);
+        asigImg.asignarImagenes("LineaHorizontal.png", jl_linea);
+
     }
-    MetodosSql metodos = new MetodosSql();
+    
+    
+    MetodosSql metodosSql = new MetodosSql();
+    Metodos asigImg = new Metodos();
+    
+    int cont = 0;
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,19 +40,19 @@ public class Registro extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         nombreText = new javax.swing.JTextField();
         apellidosText = new javax.swing.JTextField();
-        correoText = new javax.swing.JTextField();
+        tf_idNumero = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         contraseñaText = new javax.swing.JPasswordField();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jl_infoApellidos = new javax.swing.JLabel();
+        jl_infoNombre = new javax.swing.JLabel();
+        jl_infoIdNum = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
+        jl_linea = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jl_gradient = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
@@ -69,11 +79,29 @@ public class Registro extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel4.setText("Correo:");
+        jLabel4.setText("ID Numero");
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(102, 102, 102));
         jLabel5.setText("Contraseña:");
+
+        nombreText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                nombreTextKeyTyped(evt);
+            }
+        });
+
+        apellidosText.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                apellidosTextKeyTyped(evt);
+            }
+        });
+
+        tf_idNumero.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tf_idNumeroKeyTyped(evt);
+            }
+        });
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -119,21 +147,25 @@ public class Registro extends javax.swing.JFrame {
                         .addGap(50, 50, 50)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel5)
-                        .addGap(9, 9, 9)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(9, 9, 9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(15, 15, 15)))))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_infoIdNum, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contraseñaText, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(correoText, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_idNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(apellidosText, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jl_infoApellidos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(nombreText, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -159,19 +191,19 @@ public class Registro extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(nombreText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jl_infoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
                     .addComponent(apellidosText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jl_infoApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel4)
-                    .addComponent(correoText, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_idNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jl_infoIdNum, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
@@ -186,9 +218,7 @@ public class Registro extends javax.swing.JFrame {
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
-
-        jLabel14.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\LineaHorizontal.png")); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, 390));
+        getContentPane().add(jl_linea, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 200, 390));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 255));
         jPanel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -241,9 +271,8 @@ public class Registro extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 410, -1));
 
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\DegradadoNuevo.PNG")); // NOI18N
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 140, 400));
+        jl_gradient.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jl_gradient, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 0, 120, 400));
 
         pack();
         setLocationRelativeTo(null);
@@ -262,7 +291,8 @@ public class Registro extends javax.swing.JFrame {
             jLabel6.setText("La contraseña debe tener máximo 13 caracteres");
             
         } else if (contraseñaText.getText().length() < 8) {
-            jLabel6.setText("La contraseña debe tener mínimo 8 caracteres");
+            jLabel6.setText(""
+                    + "");
             
         } else {
             jLabel6.setText("");
@@ -270,19 +300,30 @@ public class Registro extends javax.swing.JFrame {
     }//GEN-LAST:event_contraseñaTextKeyTyped
 
     private void contraseñaTextFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_contraseñaTextFocusGained
-        contraseñaText.setText("");
+        if (cont == 0) {
+            contraseñaText.setText("");
+            cont++;
+        }
     }//GEN-LAST:event_contraseñaTextFocusGained
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int i = metodos.guardar(nombreText.getText(), apellidosText.getText(), correoText.getText(), contraseñaText.getText());
-        
-        if (i > 0) {
-            //Acceder a la pantalla de perfil con todos los datos
-            JOptionPane.showMessageDialog(this, "Datos guardados correctamente");
+        if (nombreText.getText().length() != 0 && apellidosText.getText().length() != 0){ 
+            if (contraseñaText.getText().length() >= 8 ) {
+                int i = metodosSql.guardar(nombreText.getText(), apellidosText.getText(), tf_idNumero.getText(), contraseñaText.getText());
+                if (i > 0) {
+                    //Acceder a la pantalla de perfil con todos los datos
+                    JOptionPane.showMessageDialog(this, "Datos guardados correctamente");
+                } else {
+                    //Detectar el error y decirselo al usuario
+                    JOptionPane.showMessageDialog(this, "Ya existe un socio con este ID");
+                }
+            } else {
+                JOptionPane.showMessageDialog(this, "La contraseña debe tener mínimo 8 caracteres");
+            }
         } else {
-            //Detectar el error y decirselo al usuario
-            JOptionPane.showMessageDialog(this, "No se pudo guardar los datos");
+            JOptionPane.showMessageDialog(this, "Debes introducir tu nombre y apellidos");
         }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
@@ -292,6 +333,50 @@ public class Registro extends javax.swing.JFrame {
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
         this.setExtendedState(ICONIFIED);
     }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void tf_idNumeroKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tf_idNumeroKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57 || key == 8 || key == 127;
+        
+        if (!numeros) {
+            evt.consume();
+            jl_infoIdNum.setText("El número de socio solo contiene números");  
+        } else if (tf_idNumero.getText().length() >= 5) {
+            evt.consume();   
+            jl_infoIdNum.setText("El número de socio tiene máximo 5 números");
+        } else {
+            jl_infoIdNum.setText("");
+            
+        } 
+    }//GEN-LAST:event_tf_idNumeroKeyTyped
+
+    private void nombreTextKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nombreTextKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 65 && key <= 90 || key >= 97 && key <= 122 || key == 32 || key >=164 && key <=165;
+        if (!numeros) {
+            evt.consume();
+            jl_infoNombre.setText("Este campo solo admite letras");
+        } else if (nombreText.getText().length() > 30) {
+            evt.consume();  
+            jl_infoNombre.setText("Este campo admite máximo 30 caracteres");
+        } else {
+            jl_infoNombre.setText("");
+        }
+    }//GEN-LAST:event_nombreTextKeyTyped
+
+    private void apellidosTextKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_apellidosTextKeyTyped
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 65 && key <= 90 || key >= 97 && key <= 122 || key == 32 || key >= 164 && key <= 165;
+        if (!numeros) {
+            evt.consume();
+            jl_infoApellidos.setText("Este campo solo admite letras");
+        } else if (apellidosText.getText().length() > 30) {
+            evt.consume();  
+            jl_infoApellidos.setText("Este campo admite máximo 30 caracteres");
+        } else {
+            jl_infoApellidos.setText("");
+        }
+    }//GEN-LAST:event_apellidosTextKeyTyped
 
     /**
      * @param args the command line arguments
@@ -334,24 +419,24 @@ public class Registro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidosText;
     private javax.swing.JPasswordField contraseñaText;
-    private javax.swing.JTextField correoText;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jl_gradient;
+    private javax.swing.JLabel jl_infoApellidos;
+    private javax.swing.JLabel jl_infoIdNum;
+    private javax.swing.JLabel jl_infoNombre;
+    private javax.swing.JLabel jl_linea;
     private javax.swing.JTextField nombreText;
+    private javax.swing.JTextField tf_idNumero;
     // End of variables declaration//GEN-END:variables
 }

@@ -56,25 +56,32 @@
                           <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jLabel3" min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="jLabel4" min="-2" pref="70" max="-2" attributes="0"/>
                               <Component id="jLabel1" min="-2" pref="70" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel8" min="-2" pref="250" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="jl_infoNombre" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="jl_infoIdNum" min="-2" pref="250" max="-2" attributes="0"/>
                       <Component id="contraseñaText" min="-2" pref="250" max="-2" attributes="0"/>
-                      <Component id="correoText" min="-2" pref="250" max="-2" attributes="0"/>
+                      <Component id="tf_idNumero" min="-2" pref="250" max="-2" attributes="0"/>
                       <Component id="apellidosText" min="-2" pref="250" max="-2" attributes="0"/>
                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jLabel7" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="jl_infoApellidos" alignment="0" min="-2" pref="250" max="-2" attributes="0"/>
                           <Component id="nombreText" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -109,21 +116,21 @@
                       <Component id="nombreText" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel8" min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="jl_infoNombre" min="-2" pref="15" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <Component id="apellidosText" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel7" min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="jl_infoApellidos" min="-2" pref="15" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="correoText" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="tf_idNumero" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel9" min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="jl_infoIdNum" min="-2" pref="15" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -187,7 +194,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Correo:"/>
+            <Property name="text" type="java.lang.String" value="ID Numero"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
@@ -202,10 +209,19 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="nombreText">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="nombreTextKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="apellidosText">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="apellidosTextKeyTyped"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="correoText">
+        <Component class="javax.swing.JTextField" name="tf_idNumero">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="tf_idNumeroKeyTyped"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
@@ -235,11 +251,11 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="jl_infoApellidos">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="jl_infoNombre">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="jl_infoIdNum">
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -257,15 +273,10 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel14">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\LineaHorizontal.png"/>
-        </Property>
-      </Properties>
+    <Component class="javax.swing.JLabel" name="jl_linea">
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="350" y="10" width="-1" height="390"/>
+          <AbsoluteConstraints x="380" y="10" width="200" height="390"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -351,16 +362,13 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel15">
+    <Component class="javax.swing.JLabel" name="jl_gradient">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\DegradadoNuevo.PNG"/>
-        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="430" y="0" width="140" height="400"/>
+          <AbsoluteConstraints x="450" y="0" width="120" height="400"/>
         </Constraint>
       </Constraints>
     </Component>
