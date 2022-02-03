@@ -41,9 +41,6 @@
     <Component class="javax.swing.JLabel" name="jl_gradient">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\DegradadoNuevo.PNG"/>
-        </Property>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -415,18 +412,12 @@
             <Component class="javax.swing.JLabel" name="jl_check">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Check.png"/>
-                </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jl_cross">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Cross.png"/>
-                </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>
@@ -469,18 +460,12 @@
             <Component class="javax.swing.JLabel" name="jl_check2">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Check.png"/>
-                </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jl_cross2">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\jleon\OneDrive\Documentos\NetBeansProjects\PantallaDeLogin\src\main\java\imagenes\Cross.png"/>
-                </Property>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
             </Component>

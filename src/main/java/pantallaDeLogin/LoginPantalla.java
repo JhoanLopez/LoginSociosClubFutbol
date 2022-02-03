@@ -83,7 +83,6 @@ public class LoginPantalla extends javax.swing.JFrame {
         getContentPane().add(jl_linea, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 200, 360));
 
         jl_gradient.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_gradient.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\DegradadoNuevo.PNG")); // NOI18N
         getContentPane().add(jl_gradient, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 140, 400));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -219,11 +218,9 @@ public class LoginPantalla extends javax.swing.JFrame {
         jPanel6.setPreferredSize(new java.awt.Dimension(25, 20));
 
         jl_check.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_check.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Check.png")); // NOI18N
         jl_check.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jl_cross.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_cross.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Cross.png")); // NOI18N
         jl_cross.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -251,11 +248,9 @@ public class LoginPantalla extends javax.swing.JFrame {
         jPanel5.setPreferredSize(new java.awt.Dimension(25, 20));
 
         jl_check2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_check2.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Check.png")); // NOI18N
         jl_check2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jl_cross2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jl_cross2.setIcon(new javax.swing.ImageIcon("C:\\Users\\jleon\\OneDrive\\Documentos\\NetBeansProjects\\PantallaDeLogin\\src\\main\\java\\imagenes\\Cross.png")); // NOI18N
         jl_cross2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
