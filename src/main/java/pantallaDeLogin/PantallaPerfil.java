@@ -18,7 +18,7 @@ public class PantallaPerfil extends javax.swing.JFrame {
         initComponents();
         asigImg.asignarImagenes("DegradadoNuevo.png", jl_gradient);
         asigImg.asignarImagenes("TarjetaMadridista.png", jl_tarjetaMadridista);
-                asigImg.asignarImagenes("LineaHorizontal.png", jl_linea);
+        asigImg.asignarImagenes("LineaHorizontal.png", jl_linea);
 
     }
 
